@@ -1,0 +1,10 @@
+image: python:3.10-slim
+
+stages:
+  - test
+
+run_python_script:
+  stage: test
+  script:
+    - echo "Starting the pipeline to run app.py..."
+    - python app.py
