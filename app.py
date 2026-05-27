@@ -1,10 +1,8 @@
-def calculate_checkout(price, tax):
-    print("Calculating final price...")
-    total = price + tax
-    
-    # This will crash the program: 'Total' is not defined!
-    return Total 
+def calculate_checkout(price, tax_rate):
+    tax_amount = price * (tax_rate / 100)
+    total = price + tax_amount
+    return total # Changed from 'Total' to 'total'
 
-if __name__ == "__main__":
-    final_price = calculate_checkout(100, 5)
-    print(f"Success: {final_price}")
+print("Calculating final price...")
+final_price = calculate_checkout(100, 5)
+print(f"Final price: ${final_price:.2f}")
